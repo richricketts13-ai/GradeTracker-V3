@@ -49,14 +49,17 @@ public class GradeTracker {
 
     public Student selectStudent(String name) { 
         if (this.students.isEmpty()) {
+
             System.out.println("No students available.");
             return null;
         }
         else if (name == null || name.isBlank()) {
             System.out.println("Invalid student name.");
+
             return null;
         } else {
             for (Student student: this.students) {
+
                 if (student.getName().equalsIgnoreCase(name)) {
                     return student;
                 }
